@@ -1,0 +1,180 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CocoaDebug
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
+@_exported import CocoaDebug
+import Darwin
+import Foundation
+import MessageUI
+import Swift
+import UIKit.UIGestureRecognizerSubclass
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class _SwiftLogHelper : ObjectiveC.NSObject {
+  @objc public static let shared: _SwiftLogHelper
+  public func handleLog(file: Swift.String?, function: Swift.String?, line: Swift.Int?, message: Any..., color: UIKit.UIColor?)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class CocoaDebugSettings : ObjectiveC.NSObject {
+  @objc public static let shared: CocoaDebugSettings
+  @objc public var slowAnimations: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var responseShake: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var firstIn: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc public var enableCrashRecording: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var enableUIBlockingMonitoring: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var enableWKWebViewMonitoring: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var enableLogMonitoring: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var disableNetworkMonitoring: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var enableRNMonitoring: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var enableMemoryLeaksMonitoring_ViewController: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var enableMemoryLeaksMonitoring_View: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var enableMemoryLeaksMonitoring_MemberVariables: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var visible: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var showBubbleAndWindow: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var serverURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc public var tabBarSelectItem: Swift.Int {
+    @objc get
+    @objc set
+  }
+  @objc public var logSelectIndex: Swift.Int {
+    @objc get
+    @objc set
+  }
+  @objc public var networkLastIndex: Swift.Int {
+    @objc get
+    @objc set
+  }
+  @objc public var bubbleFrameX: Swift.Float {
+    @objc get
+    @objc set
+  }
+  @objc public var bubbleFrameY: Swift.Float {
+    @objc get
+    @objc set
+  }
+  @objc public var logSearchWordNormal: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc public var logSearchWordRN: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc public var logSearchWordWeb: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc public var networkSearchWord: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc public var mainColor: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc public var additionalViewController: UIKit.UIViewController?
+  @objc public var emailToRecipients: [Swift.String]?
+  @objc public var emailCcRecipients: [Swift.String]?
+  @objc public var ignoredURLs: [Swift.String]? {
+    @objc get
+    @objc set
+  }
+  @objc public var onlyURLs: [Swift.String]? {
+    @objc get
+    @objc set
+  }
+  @objc public var ignoredPrefixLogs: [Swift.String]? {
+    @objc get
+    @objc set
+  }
+  @objc public var onlyPrefixLogs: [Swift.String]? {
+    @objc get
+    @objc set
+  }
+  @objc public var protobufTransferMap: [Swift.String : [Swift.String]]? {
+    @objc get
+    @objc set
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class WindowHelper : ObjectiveC.NSObject {
+  public static let shared: WindowHelper
+  public func enable()
+  public func disable()
+  public func startUIBlockingMonitoring()
+  public func stopUIBlockingMonitoring()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class CocoaDebug : ObjectiveC.NSObject {
+  @objc public static var serverURL: Swift.String?
+  @objc public static var ignoredURLs: [Swift.String]?
+  @objc public static var onlyURLs: [Swift.String]?
+  @objc public static var ignoredPrefixLogs: [Swift.String]?
+  @objc public static var onlyPrefixLogs: [Swift.String]?
+  @objc public static var additionalViewController: UIKit.UIViewController?
+  @objc public static var emailToRecipients: [Swift.String]?
+  @objc public static var emailCcRecipients: [Swift.String]?
+  @objc public static var mainColor: Swift.String
+  @objc public static var protobufTransferMap: [Swift.String : [Swift.String]]?
+  @objc public static func enable()
+  @objc public static func disable()
+  @objc public static func hideBubble()
+  @objc public static func showBubble()
+  @objc override dynamic public init()
+  @objc deinit
+}
+public func print<T>(file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line, _ message: T, color: UIKit.UIColor = .white)
+extension UIKit.UIWindow {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var canBecomeFirstResponder: Swift.Bool {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func motionBegan(_ motion: UIKit.UIEvent.EventSubtype, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func motionEnded(_ motion: UIKit.UIEvent.EventSubtype, with event: UIKit.UIEvent?)
+}
